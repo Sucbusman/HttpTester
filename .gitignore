@@ -1,0 +1,5 @@
+*.log
+*.bak
+update
+web-ext-artifacts/*
+web-ext-artifactsBac/*

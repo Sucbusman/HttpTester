@@ -1,0 +1,27 @@
+{
+	"manifest_version": 2,
+	"name": "HttpTester",
+	"version": "1.0.9_alpha",
+	"description": "To check, modify and replay raw http packet in your own style!",
+	"author":"elizabet",
+	"homepage_url":"https://github.com/E-liza-bet/HttpTester",
+	"devtools_page":"devtools/devtools-page.html",
+	"background":{"scripts":["background/background.js"]},
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+	"permissions":[
+		"<all_urls>",
+		"webRequest",
+		"webRequestBlocking",
+		"tabs",
+		"storage",
+		"downloads"
+	],
+	"icons":{
+		"16":"icons/evil.svg",
+		"24":"icons/evil.svg",
+		"32":"icons/evil.svg",
+		"48":"icons/evil.svg",
+		"96":"icons/evil.svg",
+		"128":"icons/evil.svg"
+	}
+}

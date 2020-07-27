@@ -1,0 +1,79 @@
+<html>
+<head>
+<meta charset='UTF-8'>
+<link rel="stylesheet" type="text/css" href='panel.css'></style>
+</head>
+<body>
+	<div id="mask" class="mask" title="click to cancel"></div>
+	<div id="pack" class="pack">
+		<div class="inline firstNone" id="functionsBar">
+			<div class="inline-block funcbtn" id="repo">
+				<u>Repo&nbsp;&nbsp;</u>
+			</div>
+			<div class="inline-block funcbtn" id="generator">
+				Generator	
+			</div>
+		</div>
+		<div class="firstNone" id="functionPanel">
+			<div id="repoPanel">
+					<ul id="pRepo">
+					</ul>
+				<div style="position:absolute;bottom:0px">
+					<input id="pName" placeholder="Alias for this packet"></input>
+					<button id="btnRepo"class="btn3">Save</button>
+				</div>
+			</div>
+			<div class="firstNone" id="generatorPanel">
+				<textarea id="generatorCode"></textarea>
+				<div style="position:absolute;bottom:0px">
+					<button id="downloadGenCode" class="btn3">Download</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="popup"  class="popup">
+		<div class='lineUp'>
+			function 
+			<input id='funcName' title="yourFuncName
+press Enter to focus code textarea"></input>(s){
+			<select id='chooseFunc'></select>
+		</div>
+		<textarea id="code" spellcheck='false' title='Write new code here or click right-top to edit from previous function'></textarea>
+		<div class='lineDown'>}<button id="popupOk"title="ShortCut:ctrl-s"class='btn3'>OK</button></div>
+	</div>
+	<div id="main">
+		<button id="method" class="btn1">GET</button>
+		<textarea id='url' placeholder='url'></textarea>
+		<div id="zoomUrl" class="roundBtn"> ↓</div>
+		<label for="updateContentLen" title="Auto update Content-Length in HTTP header.">A</label>
+		<input type="checkbox"id="updateContentLen" checked="true" title="For most of time,you should check it except when testing a web server's reaction about content-length"></input>
+		<label for="malform" title="Send data with ajax-fake-content technique,more detail see github">S</label>
+		<input type="checkbox"id="malform" title="Be sure to check it when you want to send json,multipartform or even malform data,otherwise it send data with form"></input>
+		<label id="status">:|</label>
+		<br/>
+		<textarea id='postdata' spellcheck='false'placeholder='body'></textarea>
+		<textarea id='head' spellcheck='false'placeholder='header'></textarea>
+		<br>
+		<button id='btnExec' class="btn1"title='Send requests'>EXEC</button>
+		<button id='btnPacket' class="btn1"title='Fetch packets from cache'>PACKET</button>
+		<button id='btnClear' class="btn1"title='Clear packets logged'>CLEAR</button>
+		<select id='select'></select>
+		<button id="addfunc"class="btn2" title="Open a code editor panel and write your script">AddFunc</button>
+		<div id="userBtnField" class="inline"></div>
+	</div>
+	<hr />
+	<div id="expand">
+		<p class="hint">↓expand to check response detail↓</p>
+	</div>
+	<div id="view">
+		<textarea id='responseHeader' spellcheck='false'placeholder='response header'></textarea>
+		<textarea id='responseBody' spellcheck='fasle'placeholder='response body'></textarea>
+		<p id='rollup' class="hint">↑click any blank area to roll up↑</p>
+	</div>
+</body>
+<script src='helper.js'></script>
+<script src='welcome.js'></script>
+<script src='view.js'></script>
+<script src='enctype.js'></script>
+<script src='panel.js'></script>
+</html>
